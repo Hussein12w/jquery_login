@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Style/login.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+     integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            $(".login").hide();
+            $(".register_li").addClass("active");
+
+            $(".login_li").click(function(){
+                $(this).addClass("active");
+                $(".register_li").removeClass("active");
+                $(".login").show();
+                $(".register").hide();
+            })
+
+            $(".register_li").click(function(){
+                $(this).addClass("active");
+                $(".login_li").removeClass("active");
+                $(".register").show();
+                $(".login").hide();
+            })
+        });
+     
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left">
+            <h3>Company</h3>
+            <img src="./logo.png" alt="Comapny">
+        </div>
+        <div class="right">
+            <div class="tabs">
+                <ul>
+                    <li class="register_li">Regiter</li>
+                    <li class="login_li">Login</li>
+                </ul>
+            </div>
+            <!--Register Form-->
+            <div class="register">
+                <div class="input_field">
+                    <input type="text" placeholder="Username" class="input">
+                </div>
+                <div class="input_field">
+                    <input type="text" placeholder="E-mail" class="input">
+                </div>
+                <div class="input_field">
+                    <input type="password" placeholder="Password" class="input">
+                </div>
+                <div class="btn"><a href="./index.html">Regsiter</a></div>
+            </div>
+            <!--Login Form-->
+            <div class="login">
+                <div class="input_field">
+                    <input type="text" placeholder="E-mail" class="input">
+                </div>
+                <div class="input_field">
+                    <input type="password" placeholder="Password" class="input">
+                </div>
+                <div class="btn"><a href="./index.html">Login</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
